@@ -1,17 +1,12 @@
-﻿int numberA = ReadInt("Введите число А: ");
-int numberB = ReadInt("Введите число В: ");
-ToDeegree(numberA, numberB);
-void ToDeegree(int a, int b)
+﻿Console.WriteLine("Введите число А: ");
+int a = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите число В: ");
+int b = Convert.ToInt32(Console.ReadLine());
+int step = a;
+
+for (int i = 1; i < b; i++)
 {
-    int result = 1;
-    for (int i = 1; i <= b; i++)
-    {
-        result = result * a;
-    }
-    Console.WriteLine(result);
+    step = (step * a);
 }
-int ReadLine(string text)
-{
-    Console.WriteLine(text);
-    return Convert.ToInt32(Console.ReadLine());
-}
+Console.WriteLine("А в степени В равно: " + step);
+
